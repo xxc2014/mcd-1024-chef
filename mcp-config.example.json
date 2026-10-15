@@ -1,0 +1,12 @@
+{
+  "_说明": "麦门1024大厨所需MCP配置示例。复制到你的客户端MCP配置后，替换为大赛官方提供的实际服务地址与令牌；若官方为stdio形态，将url换成 command/args/env 写法，见 MCP_INTEGRATION.md",
+  "mcpServers": {
+    "mcd-mcp": {
+      "url": "https://REPLACE-WITH-OFFICIAL-MCD-MCP-HOST/mcp",
+      "headers": {
+        "Authorization": "Bearer REPLACE-WITH-YOUR-TOKEN"
+      },
+      "timeout": 60000
+    }
+  }
+}
