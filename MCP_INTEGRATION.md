@@ -4,12 +4,11 @@
 
 ## 1. 接入配置
 
-将 `mcp-config.example.json` 复制为你的客户端 MCP 配置（ZCode 中为 `.zcode/mcp.json` 或界内等价配置），替换两处占位：
+将 `mcp-config.example.json` 复制为你的客户端 MCP 配置（ZCode 中为 `.zcode/mcp.json` 或界面内等价配置），替换 `YOUR_MCP_TOKEN`：
 
-- `url`：大赛官方提供的 MCP 服务地址
-- `Authorization`：官方下发的访问令牌
-
-若官方提供的是 stdio 形态服务（`command`/`args` 启动），把 `url` 字段换成对应 `command`/`args`/`env` 写法即可，工具调用层完全一致。
+- 服务端点：`https://mcp.mcd.cn`（Streamable HTTP 协议，与官方指南 [M-China/mcd-mcp-server](https://github.com/M-China/mcd-mcp-server) 一致）
+- 认证方式：`Authorization: Bearer <MCP Token>`；Token 在麦当劳开放平台 [https://open.mcd.cn/mcp](https://open.mcd.cn/mcp) 登录后于控制台申请
+- 限频：每个 Token 每分钟最多 600 次请求，超限返回 429 —— 本 skill 的调用链按「一次拉取、多处复用」设计，单次完整流程 API 调用量远低于限频
 
 ## 2. 工具调用矩阵
 

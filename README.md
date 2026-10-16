@@ -10,6 +10,13 @@
 - 一顿麦门热量爆表：1024 kcal 硬上限，多少热量剩余、预算剩余一目了然
 - 优惠券散落各处：自动比对可领券/门店券，告诉你用哪张最省
 
+## 目标用户
+
+- **加班/晚归的程序员**：把热量当成硬预算，1024 kcal 上限防「越忙越爆食」
+- **控卡期的麦门信徒**：吃得过瘾又不脱轨，热量剩余、预算剩余全程透明
+- **给团队点下午茶的组长**：把「点什么」变成一道可验证的优化题，不再拍脑袋
+- **AI Agent / Skill 开发者**：一份可 fork 的 MCP 工程范例——双约束背包、写操作护栏、官方对齐的接入配置
+
 ## 核心特性
 
 | 特性 | 说明 |
@@ -40,7 +47,7 @@
 
 ## 快速开始
 
-1. **配 MCP**：复制 `mcp-config.example.json` 到你的客户端 MCP 配置，替换为大赛提供的实际服务地址与凭据（详见 `MCP_INTEGRATION.md`）。
+1. **配 MCP**：复制 `mcp-config.example.json` 到你的客户端 MCP 配置，把 `YOUR_MCP_TOKEN` 换成你的 MCP Token（申请入口 [https://open.mcd.cn/mcp](https://open.mcd.cn/mcp)，官方接入指南：[M-China/mcd-mcp-server](https://github.com/M-China/mcd-mcp-server)）。
 2. **装 skill**：把 `.agents/skills/mcd-1024-chef/` 整个目录拷贝到你的项目 `.agents/skills/` 下（ZCode / 兼容客户端均可发现）。
 3. **触发**：
    - 「1024 程序员节，帮我凑个 40 块的麦门套餐」
